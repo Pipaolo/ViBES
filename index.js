@@ -6,6 +6,7 @@ const PORT = process.env.PORT || 3000;
 
 // Static files
 app.use(express.static(path.join(__dirname, "public")));
+app.use("/static", express.static(path.join(__dirname, "/public")));
 
 /**
  * This middleware will make the server serve the html files
